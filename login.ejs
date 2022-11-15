@@ -1,0 +1,184 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width-device-width,initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="sie-edge" />
+    <link rel="stylesheet"  href="register.css">
+    <link rel="stylesheet" href="buttons.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="contactus.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/css/lightgallery.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" /> 
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <title>Slider Form</title>
+</head>
+
+<body>
+	<header class="header">
+		<div class="left-header">
+			<a href="http://localhost:3000/coomingsoon" class="logo"><img src="megalogotheme.png">
+			Megalith<span>'23</span></a>
+		</div>
+		<nav class="navbar">
+			<a href="http://localhost:3000/">home</a>
+			<a href="#about">Internship Brochure</a>
+			<a href="https://2022.megalith.co.in/">Go to Megalith 2022</a>
+		</nav>
+
+		<div class="icons">
+			<div id="menu-btn" class="fas fa-bars"></div>
+			<div id="login-btn" class="fas fa-user"></div>
+		</div>
+
+		<!-- For Login Form -->
+		<!-- <form action="" class="login-form">
+	      <h3>login form</h3>
+	      <input type="email" placeholder="enter your email" class="box">
+	      <input type="password" placeholder="enter your password" class="box">
+	      <div class="flex">
+	         <input type="checkbox" name="" id="remember-me">
+	         <label for="remember-me">remember me</label>
+	         <a href="#">forgot password?</a>
+	      </div>
+	      <input type="submit" value="login now" class="btn">
+	      <p>don't have an account <a href="#">create one!</a></p>
+	   </form> -->
+
+	</header>
+
+    <!-- ==================================================================================== -->
+
+
+    <div class="container " id="container">
+        <div class="overlay-container">
+            <div class="overlay">
+                <div class="overlay-panel overlay-left">
+                    <h1>Welcome</h1>
+                    <p>Already have an account !</p>
+                    <button class="ghost" id="signIn">Sign In</button>
+                </div>
+                <div class="overlay-panel overlay-right">
+                    <h1>Hello,Friend</h1>
+                    <p>Enter your details and start journey with us</p>
+                    <button class="ghost" id="signUp">Sign Up</button>
+                </div>
+            </div>
+        </div><br><br>
+        <div class="form-container sign-up-container">
+            <form action="/signup" class="signupform" method="POST">
+                <h1 class="createaccount">Create Account</h1>
+                <input type="text" name="username" placeholder="Name" autocomplete="off" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="password" name="password" placeholder="Password" required>
+                <input type="text" name="mobileNumber" class="input" placeholder="Mobile Number" required maxlength="13" minlength="6">
+				<input type="text" name="college" class="input" placeholder="College " required>
+				<select name="country" class="countries form-control input" id="countrylist" required>
+				    <option value="" selected>Select Country</option>
+				</select>
+				<select name="state" class="states form-control input" id="statelist" disabled required>
+				    <option value="" selected>Select State</option>
+				</select>
+				<select name="city" class="cities form-control input" id="citylist" disabled required>
+				    <option value="" selected>Select City</option>
+				</select>
+				<select name="gender" class="input" placeholder="Select your Gender">
+				    <option value="none" selected>Gender</option>
+				    <option value="male">Male</option>
+				    <option value="female">Female</option>
+				    <option value="other">other</option>
+				</select>
+				<input type="text" name="yearOfStudy" class="input" placeholder="Specify your Years of Study">
+				<input type="text" name="partOrNot" class="input" placeholder="Were you a part Of Megalith? Y or N">
+                <button type="submit" id="signupbutton">Sign Up</button>
+            </form>
+        </div>
+        <div class="form-container sign-in-container">
+            <form action="/login" class="signinform" method="POST">
+                <h1 class="signinoption">Sign In</h1>
+                <span>or use your account</span>
+                <input type="text" name="username" placeholder="username">
+                <input type="password" name="password" placeholder="Password">
+                <button type="submit">Sign In</button>
+            </form>
+        </div>
+       
+    </div>
+
+    
+
+<!-- ============================================================================================ -->
+
+<footer class="footer">
+    <div class="footer-container">
+      <div class="footer-row">
+
+        <div class="contactus-wrapper">
+          <div class="contactus-container">
+            <form class="contactus" action="/contactus" method="POST">
+              <h1>Let Us know, What's in your Head.</h1>
+              <div class="item name_email">
+                <input class="emailtext" type="text" name="sendername" placeholder="Your name" required>
+                <input class="emailtext" type="email" name="senderemail" placeholder="Email" required>
+              </div>
+              <div class="item">
+                <input class="emailtext" type="text" name="sendersubject" placeholder="Subject" required>
+              </div>
+              <div class="item">
+                <textarea class="emailtext" name="sendermessage" placeholder="Message" required></textarea>
+              </div>
+              <div class="contactusbtn"><button class="regbtn regbtn__new" type="submit">Send</button>
+              </div>
+            </form>
+          </div>
+        </div>  
+
+        <div class="footer-div">
+          <div class="footer-div-1">
+        <div class="footer-col">
+          <h4>Megalith 2023</h4>
+          <img src="megalogotheme.png">
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#brochure_btn">Internship Brochure</a></li>
+            <li><a href="coming_soon.html">Megalith 2023</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Follow Us</h4>
+          <div class="social-links">
+            <a href="https://www.facebook.com/megalithkgp"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://twitter.com/megalithkgp"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com/iitkgp.megalith/"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/company/megalith-iit-kharagpur/mycompany/"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contact Us</h4>
+          <div class="contact-number">
+            <ul>
+              <li><a href="">Rounak Das +919330341418</a></li>
+              <li><a href="">Aditya Pandey +916394433068</a></li>
+              <li><a href="">Abhijeet Niggam +918901675870</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    
+            
+      </div>
+    </div>
+  </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/js/lightgallery.min.js"></script>
+
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+
+    <script src="register.js"></script>
+</body>
+
+</html>
